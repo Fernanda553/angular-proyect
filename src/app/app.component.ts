@@ -5,9 +5,17 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'angular-proyect';
+ public title: string = 'angular-proyect';
+ public counter: number = 10
+
+ increaseBy(value: number):void {
+  this.counter += value
+ }
+
+ resetCounter():void {
+  this.counter = 10
+ }
 }
